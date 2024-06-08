@@ -1,26 +1,36 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from './components/Dashboard';
+import styled, { createGlobalStyle } from 'styled-components';
+import NavBar from './components/NavBar';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <AppContainer>
+        <NavBar/>
+        <Dashboard />
+      </AppContainer>
+    </>
   );
-}
+};
 
 export default App;
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+`;
+
+const AppContainer = styled.div`
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+`;
