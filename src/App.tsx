@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from 'react';
 import Dashboard from './components/Dashboard';
 import styled, { createGlobalStyle } from 'styled-components';
