@@ -1,4 +1,3 @@
-// src/types/index.ts
 export interface ActivityMeta {
     label: string;
     fillColor: string;
